@@ -13,12 +13,19 @@ class List extends Component {
           return (
             <ProfileCard
               key={i}
-              id={i}
+              id={person.id}
               firstName={person.personal.first_name}
               lastName={person.personal.last_name}
               age={person.personal.age}
               job={person.personal.job_title}
               avatar={person.personal.avatar}
+              company={person.personal.job_company}
+              city={person.personal.city}
+              country={person.personal.country}
+              devices={person.devices}
+              devicesName={person.devices.name}
+              devicesVendor={person.devices.vendor}
+              devicesCount={person.devices.count}
             />
           );
         })}

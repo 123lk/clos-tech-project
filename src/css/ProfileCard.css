@@ -1,7 +1,16 @@
 .profile-card {
-  border: 1px solid green;
+  border: 1px solid #C7DFC2;
 }
 
 #avatar {
   width: 50px;
 }
+
+#personal {
+  border: 1px solid grey;
+}
+
+#devices {
+  border: 1px solid grey;
+}
+
