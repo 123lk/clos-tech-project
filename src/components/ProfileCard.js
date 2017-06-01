@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import Devices from './Devices';
 import Twitter from './Twitter';
 import Facebook from './Facebook';
@@ -11,7 +11,7 @@ const findById = helpers.findById;
 const data = findById(people.people);
 
 class ProfileCard extends Component {
-  render() {
+  render () {
     let devices = data[this.props.id].devices;
     let social = data[this.props.id].social;
     let interests = data[this.props.id].interests;
@@ -26,11 +26,11 @@ class ProfileCard extends Component {
             <div className="card-block" id="personal">
               <h4 className="card-header" id='person-title'>Personal</h4>
               <ul>
-                <li><strong>Age:  </strong> {this.props.age}</li>
-                <li><strong>Job:  </strong> {this.props.job}</li>
-                <li><strong>Company:  </strong> {this.props.company}</li>
-                <li><strong>City:  </strong> {this.props.city}</li>
-                <li><strong>country:  </strong> {this.props.country}</li>
+                <li><strong>Age:  </strong>{this.props.age}</li>
+                <li><strong>Job:  </strong>{this.props.job}</li>
+                <li><strong>Company:  </strong>{this.props.company}</li>
+                <li><strong>City:  </strong>{this.props.city}</li>
+                <li><strong>country:  </strong>{this.props.country}</li>
               </ul>
             </div>
             <div className="card-block" id="devices">
@@ -86,19 +86,19 @@ class ProfileCard extends Component {
               <div className='scores'>
                 <h5 id='score-item'><strong>Footprint</strong></h5>
                 <div className="progress">
-                  <div className="progress-bar" style={{ width: scores.footprint_size + '%' }} role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">{scores.footprint_size}%</div>
+                  <div className="progress-bar" style={{width: scores.footprint_size + '%'}} role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">{scores.footprint_size}%</div>
                 </div>
                 <h5 id='score-item'><strong>ID</strong></h5>
                 <div className="progress">
-                  <div className="progress-bar" style={{ width: scores.id + '%' }} role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">{scores.id}%</div>
+                  <div className="progress-bar" style={{width: scores.id + '%'}} role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">{scores.id}%</div>
                 </div>
                 <h5 id='score-item'><strong>Commenter</strong></h5>
                 <div className="progress">
-                  <div className="progress-bar" style={{ width: scores.commenter + '%' }} role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">{scores.commenter}%</div>
+                  <div className="progress-bar" style={{width: scores.commenter + '%'}} role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">{scores.commenter}%</div>
                 </div>
                 <h5 id='score-item'><strong>Sharer</strong></h5>
                 <div className="progress">
-                  <div className="progress-bar" style={{ width: scores.sharer + '%' }} role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">{scores.footprint_size}%</div>
+                  <div className="progress-bar" style={{width: scores.sharer + '%'}} role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">{scores.footprint_size}%</div>
                 </div>
               </div>
             </div>

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import ProfileCard from './ProfileCard';
 import data from '../people.json';
 import '../css/List.css';
