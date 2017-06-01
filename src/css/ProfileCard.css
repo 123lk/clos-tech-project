@@ -2,6 +2,7 @@
   background-color: white;
   margin-bottom: 1em;
   color: #706E6F;
+  border-radius: 1em;
 }
 
 .card-header {
@@ -28,6 +29,12 @@
   font-weight: bold;
 }
 
+#scores-title {
+  color: #7D41BA;
+  font-weight: bold;;
+  font-weight: bold;
+}
+
 li {
   list-style-type: none;
   padding-right: 2em;
@@ -48,25 +55,41 @@ li {
 
 #avatar {
   width: 80px;
+  border-radius: 1em;
 }
 
 #personal {
-  border: 1px solid grey;
+  border: 2px solid #DE4564;
+  margin-bottom: 1em;
+  border-radius: 1em;
+  background-color: #FFDFF7;
 }
 
 #devices {
-  border: 1px solid grey;
+  border: 2px solid #F27439;
+  margin-bottom: 1em;
+  border-radius: 1em;
+  background-color: #FCFFCD;
 }
 
 #social {
-  border: 1px solid grey; 
+  border: 2px solid #1C7BB1;
+  margin-bottom: 1em;
+  border-radius: 1em; 
+  background-color: #DFE7FF;
 }
 
 #interests {
-  border: 1px solid grey; 
+  border: 2px solid #43A17C;
+  margin-bottom: 1em;
+  border-radius: 1em; 
+  background-color: #DFFFE7;
 }
 
 #scores {
-  border: 1px solid grey; 
+  border: 2px solid #7D41BA;
+  margin-bottom: 1em;
+  border-radius: 1em; 
+  background-color: #FFDFF7;
 }
 

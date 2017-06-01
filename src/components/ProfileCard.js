@@ -82,12 +82,12 @@ class ProfileCard extends Component {
               })}
             </div>
             <div className="card-block" id="scores">
-              <h4 className="card-header">Scores</h4>
+              <h4 className="card-header" id="scores-title">Scores</h4>
               <ul>
-                <li>Footprint: {scores.footprint_size}</li>
-                <li>ID: {scores.id}</li>
-                <li>Commenter: {scores.commenter}</li>
-                <li>Sharer: {scores.sharer}</li>
+                <li><strong>Footprint:</strong> {scores.footprint_size}</li>
+                <li><strong>ID:</strong> {scores.id}</li>
+                <li><strong>Commenter:</strong> {scores.commenter}</li>
+                <li><strong>Sharer:</strong> {scores.sharer}</li>
               </ul>
             </div>
           </div>
