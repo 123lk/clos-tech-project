@@ -1,9 +1,53 @@
 .profile-card {
-  border: 1px solid #C7DFC2;
+  background-color: white;
+  margin-bottom: 1em;
+  color: #706E6F;
+}
+
+.card-header {
+  margin-left: 2.2em;
+}
+
+#person-title {
+  color: #DE4564; 
+  font-weight: bold;
+} 
+
+#devices-title {
+  color: #F27439; 
+  font-weight: bold;
+}
+
+#social-title {
+  color: #1C7BB1;
+  font-weight: bold;
+}
+
+#interests-title {
+  color: #43A17C;
+  font-weight: bold;
+}
+
+li {
+  list-style-type: none;
+  padding-right: 2em;
+}
+
+#list-name {
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 2em;
+  color: grey;
+}
+
+#list-name:hover {
+  color: #ADADAD;
+  text-decoration: underline;
+  -webkit-text-decoration-color: #ADADAD;
 }
 
 #avatar {
-  width: 50px;
+  width: 80px;
 }
 
 #personal {

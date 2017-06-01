@@ -9,7 +9,7 @@ class App extends Component {
         <div className='row'>
           <div className='col-xs-12'>
             <header id='header'>
-              <h1>Hello Soda</h1>
+              <img src={require('../images/headerLogo.png')} width="40%" alt=""/>
             </header>
           </div>
         </div>
@@ -18,6 +18,9 @@ class App extends Component {
             <List />
           </div>
         </div>
+          {/*<div className='footer'>
+            <span id='footer-item'>www.hellosoda.com</span>
+          </div>*/}
       </div>
     );
   }

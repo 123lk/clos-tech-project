@@ -17,30 +17,28 @@ class ProfileCard extends Component {
     let interests = data[this.props.id].interests;
     let scores = data[this.props.id].scores;
     return (
-      <div className='profile-card'>
+      <div className='profile-card' id='profile'>
         <img src={require('../images/' + this.props.avatar)} id="avatar" alt="" />
-        <span>{this.props.firstName} {this.props.lastName}</span>
-        <p>
-          <button className="btn btn-primary" id='details-button' type="button" data-toggle="collapse" data-target={'#' + this.props.id} aria-expanded="false" aria-controls="details">
-            View details
-        </button>
-        </p>
+        <a data-toggle="collapse" data-target={'#' + this.props.id} aria-expanded="false" aria-controls="details">
+          <span id='list-name'>{this.props.firstName} {this.props.lastName}</span></a>
         <div className="collapse" id={this.props.id}>
           <div className="card card-block">
             <div className="card-block" id="personal">
-              <h4 className="card-header">Personal</h4>
+              <h4 className="card-header" id='person-title'>Personal</h4>
               <ul>
-                <li>Age: {this.props.age}</li>
-                <li>Job: {this.props.job}</li>
-                <li>Company: {this.props.company}</li>
-                <li>City: {this.props.city}</li>
-                <li>Country: {this.props.country}</li>
+                <li><strong>Age:  </strong> {this.props.age}</li>
+                <li><strong>Job:  </strong> {this.props.job}</li>
+                <li><strong>Company:  </strong> {this.props.company}</li>
+                <li><strong>City:  </strong> {this.props.city}</li>
+                <li><strong>country:  </strong> {this.props.country}</li>
               </ul>
             </div>
             <div className="card-block" id="devices">
-              <h4 className="card-header">Devices</h4>
+              <h4 className="card-header" id='devices-title'>Devices</h4>
               {devices.map((device, i) => {
                 return <Devices
+                  total={devices.length}
+                  key={i}
                   name={device.name}
                   vendor={device.vendor}
                   count={device.count}
@@ -48,10 +46,11 @@ class ProfileCard extends Component {
               })}
             </div>
             <div className="card-block" id="social">
-              <h4 className="card-header">Social</h4>
+              <h4 className="card-header" id="social-title">Social</h4>
               {social.map((account, i) => {
                 if (account.type === 'twitter') {
                   return <Twitter
+                    key={i}
                     type={account.type}
                     username={account.username}
                     url={account.url}
@@ -62,6 +61,7 @@ class ProfileCard extends Component {
                 }
                 if (account.type === 'facebook') {
                   return <Facebook
+                    key={i}
                     type={account.type}
                     id={account.id}
                     url={account.url}
@@ -72,9 +72,10 @@ class ProfileCard extends Component {
               })}
             </div>
             <div className="card-block" id="interests">
-              <h4 className="card-header">Interests</h4>
+              <h4 className="card-header" id="interests-title">Interests</h4>
               {interests.map((interest, i) => {
                 return <Interests
+                  key={i}
                   name={interest.name}
                   count={interest.count}
                 />;

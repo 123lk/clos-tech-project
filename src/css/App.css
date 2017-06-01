@@ -1,7 +1,23 @@
 #header {
-  background-color: #3A3A3A;
   color: white;
   text-align: center;
+  margin-bottom: 2em;
 }
+
+.footer {
+  /*position: absolute;*/
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  text-align: center;
+  background-color: #706E6F;
+}
+
+#footer-item {
+  color: white;
+  margin-right: 15px;
+}
+
 
 

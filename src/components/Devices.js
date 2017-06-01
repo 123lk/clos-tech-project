@@ -5,9 +5,9 @@ class Devices extends Component {
     return (
       <div className='devices'>
         <ul>
-          <li>Name: {this.props.name}</li>
-          <li>Vendor: {this.props.vendor}</li>
-          <li>Count: {this.props.count}</li>
+          <li><strong>Name:  </strong> {this.props.name}</li>
+          <li><strong>Vendor:  </strong> {this.props.vendor}</li>
+          <li><strong>Count:  </strong> {this.props.count}</li>
         </ul>
       </div>
     );
