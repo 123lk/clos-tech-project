@@ -23,9 +23,9 @@ class List extends Component {
               city={person.personal.city}
               country={person.personal.country}
               devices={person.devices}
-              devicesName={person.devices.name}
-              devicesVendor={person.devices.vendor}
-              devicesCount={person.devices.count}
+              social={person.social}
+              interests={person.interests}
+              scores={person.scores}
             />
           );
         })}

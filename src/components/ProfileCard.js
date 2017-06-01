@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Devices from './Devices';
+import Twitter from './Twitter';
+import Facebook from './Facebook';
 import people from '../people.json';
 import * as helpers from '../helpers/helpers.js';
 import '../css/ProfileCard.css';
@@ -10,6 +12,7 @@ const data = findById(people.people);
 class ProfileCard extends Component {
   render () {
   let devices = data[this.props.id].devices;
+  let social = data[this.props.id].social;
     return (
       <div className='profile-card'>
         <img src={require('../images/' + this.props.avatar)} id="avatar" alt="" />
@@ -41,8 +44,29 @@ class ProfileCard extends Component {
               />;
             })}
             </div>
-            <div className="card-block">
-            Social
+            <div className="card-block" id="social">
+            <h4 className="card-header">Social</h4>
+            {social.map((account, i) => {
+              if (account.type === 'twitter') {
+                return <Twitter 
+                type={account.type}
+                username={account.username}
+                url={account.url}
+                account_age={account.account_age}
+                following={account.following}
+                followers={account.followers}
+                />;
+              }
+            if (account.type === 'facebook') {
+              return <Facebook 
+              type={account.type}
+              id={account.id}
+              url={account.url}
+              account_age={account.account_age}
+              friends={account.friends}
+              />;
+            }
+            })}
             </div>
             <div className="card-block">
             Interests
@@ -58,11 +82,3 @@ class ProfileCard extends Component {
 }
 
 export default ProfileCard;
-
-
-    // function getById (id) {
-    // return data.people.map(function (person)=>{
-    //   return person.id === id
-    // }) 
-  
-    // } 
