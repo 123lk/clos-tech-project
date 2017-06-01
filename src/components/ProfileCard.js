@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Devices from './Devices';
 import Twitter from './Twitter';
 import Facebook from './Facebook';
+import Interests from './Interests';
 import people from '../people.json';
 import * as helpers from '../helpers/helpers.js';
 import '../css/ProfileCard.css';
@@ -13,6 +14,7 @@ class ProfileCard extends Component {
   render () {
   let devices = data[this.props.id].devices;
   let social = data[this.props.id].social;
+  let interests = data[this.props.id].interests;
     return (
       <div className='profile-card'>
         <img src={require('../images/' + this.props.avatar)} id="avatar" alt="" />
@@ -68,8 +70,14 @@ class ProfileCard extends Component {
             }
             })}
             </div>
-            <div className="card-block">
-            Interests
+            <div className="card-block" id="interests">
+            <h4 className="card-header">Interests</h4>
+            {interests.map((interest, i) => {
+              return <Interests
+              name={interest.name}
+              count={interest.count}
+               />;
+            })}
             </div>
             <div className="card-block">
             Scores
