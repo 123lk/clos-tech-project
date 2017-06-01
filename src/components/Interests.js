@@ -6,8 +6,8 @@ class Interests extends Component {
     return (
       <div className='interests'>
         <ul>
-          <li><strong>{this.props.name}</strong> </li>
-          <li><strong>Count:  </strong> {this.props.count}</li>
+          <li><strong>Interest: </strong>{this.props.name}</li>
+          <li><strong>Count:  </strong>{this.props.count}</li>
         </ul>
       </div>
     );

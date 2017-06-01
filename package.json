@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "bootstrap": "^3.3.7",
+    "chai": "^4.0.1",
     "react": "^15.5.4",
     "react-dom": "^15.5.4"
   },
