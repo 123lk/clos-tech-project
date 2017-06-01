@@ -9,7 +9,7 @@ class App extends Component {
         <div className='row'>
           <div className='col-xs-12'>
             <header id='header'>
-              <img src={require('../images/headerLogo.png')} width="40%" alt=""/>
+              <img id="header-logo" src={require('../images/headerLogo.png')} width="40%" alt=""/>
             </header>
           </div>
         </div>

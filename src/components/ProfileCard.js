@@ -11,7 +11,7 @@ const findById = helpers.findById;
 const data = findById(people.people);
 
 class ProfileCard extends Component {
-  render () {
+  render() {
     let devices = data[this.props.id].devices;
     let social = data[this.props.id].social;
     let interests = data[this.props.id].interests;
@@ -83,12 +83,24 @@ class ProfileCard extends Component {
             </div>
             <div className="card-block" id="scores">
               <h4 className="card-header" id="scores-title">Scores</h4>
-              <ul>
-                <li><strong>Footprint:</strong> {scores.footprint_size}</li>
-                <li><strong>ID:</strong> {scores.id}</li>
-                <li><strong>Commenter:</strong> {scores.commenter}</li>
-                <li><strong>Sharer:</strong> {scores.sharer}</li>
-              </ul>
+              <div className='scores'>
+                <h5 id='score-item'><strong>Footprint</strong></h5>
+                <div className="progress">
+                  <div className="progress-bar" style={{ width: scores.footprint_size + '%' }} role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">{scores.footprint_size}%</div>
+                </div>
+                <h5 id='score-item'><strong>ID</strong></h5>
+                <div className="progress">
+                  <div className="progress-bar" style={{ width: scores.id + '%' }} role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">{scores.id}%</div>
+                </div>
+                <h5 id='score-item'><strong>Commenter</strong></h5>
+                <div className="progress">
+                  <div className="progress-bar" style={{ width: scores.commenter + '%' }} role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">{scores.commenter}%</div>
+                </div>
+                <h5 id='score-item'><strong>Sharer</strong></h5>
+                <div className="progress">
+                  <div className="progress-bar" style={{ width: scores.sharer + '%' }} role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">{scores.footprint_size}%</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
