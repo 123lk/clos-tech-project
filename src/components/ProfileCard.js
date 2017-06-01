@@ -12,9 +12,10 @@ const data = findById(people.people);
 
 class ProfileCard extends Component {
   render () {
-  let devices = data[this.props.id].devices;
-  let social = data[this.props.id].social;
-  let interests = data[this.props.id].interests;
+    let devices = data[this.props.id].devices;
+    let social = data[this.props.id].social;
+    let interests = data[this.props.id].interests;
+    let scores = data[this.props.id].scores;
     return (
       <div className='profile-card'>
         <img src={require('../images/' + this.props.avatar)} id="avatar" alt="" />
@@ -27,60 +28,66 @@ class ProfileCard extends Component {
         <div className="collapse" id={this.props.id}>
           <div className="card card-block">
             <div className="card-block" id="personal">
-            <h4 className="card-header">Personal</h4>
-            <ul>
-            <li>Age: {this.props.age}</li>
-            <li>Job: {this.props.job}</li>
-            <li>Company: {this.props.company}</li>
-            <li>City: {this.props.city}</li>
-            <li>Country: {this.props.country}</li>
-            </ul>
+              <h4 className="card-header">Personal</h4>
+              <ul>
+                <li>Age: {this.props.age}</li>
+                <li>Job: {this.props.job}</li>
+                <li>Company: {this.props.company}</li>
+                <li>City: {this.props.city}</li>
+                <li>Country: {this.props.country}</li>
+              </ul>
             </div>
             <div className="card-block" id="devices">
-            <h4 className="card-header">Devices</h4>
-            {devices.map((device, i) => {
-              return <Devices 
-              name={device.name}
-              vendor={device.vendor}
-              count={device.count}
-              />;
-            })}
+              <h4 className="card-header">Devices</h4>
+              {devices.map((device, i) => {
+                return <Devices
+                  name={device.name}
+                  vendor={device.vendor}
+                  count={device.count}
+                />;
+              })}
             </div>
             <div className="card-block" id="social">
-            <h4 className="card-header">Social</h4>
-            {social.map((account, i) => {
-              if (account.type === 'twitter') {
-                return <Twitter 
-                type={account.type}
-                username={account.username}
-                url={account.url}
-                account_age={account.account_age}
-                following={account.following}
-                followers={account.followers}
-                />;
-              }
-            if (account.type === 'facebook') {
-              return <Facebook 
-              type={account.type}
-              id={account.id}
-              url={account.url}
-              account_age={account.account_age}
-              friends={account.friends}
-              />;
-            }
-            })}
+              <h4 className="card-header">Social</h4>
+              {social.map((account, i) => {
+                if (account.type === 'twitter') {
+                  return <Twitter
+                    type={account.type}
+                    username={account.username}
+                    url={account.url}
+                    account_age={account.account_age}
+                    following={account.following}
+                    followers={account.followers}
+                  />;
+                }
+                if (account.type === 'facebook') {
+                  return <Facebook
+                    type={account.type}
+                    id={account.id}
+                    url={account.url}
+                    account_age={account.account_age}
+                    friends={account.friends}
+                  />;
+                }
+              })}
             </div>
             <div className="card-block" id="interests">
-            <h4 className="card-header">Interests</h4>
-            {interests.map((interest, i) => {
-              return <Interests
-              name={interest.name}
-              count={interest.count}
-               />;
-            })}
+              <h4 className="card-header">Interests</h4>
+              {interests.map((interest, i) => {
+                return <Interests
+                  name={interest.name}
+                  count={interest.count}
+                />;
+              })}
             </div>
-            <div className="card-block">
-            Scores
+            <div className="card-block" id="scores">
+              <h4 className="card-header">Scores</h4>
+              <ul>
+                <li>Footprint: {scores.footprint_size}</li>
+                <li>ID: {scores.id}</li>
+                <li>Commenter: {scores.commenter}</li>
+                <li>Sharer: {scores.sharer}</li>
+              </ul>
             </div>
           </div>
         </div>
