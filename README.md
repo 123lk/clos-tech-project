@@ -38,3 +38,5 @@ $npm test
 [Bootstrap](http://getbootstrap.com/css/) - front-end framework
 
 [Google Fonts](https://fonts.google.com/) - font directory
+
+[Font Awesome](http://fontawesome.io/) - icon directory
