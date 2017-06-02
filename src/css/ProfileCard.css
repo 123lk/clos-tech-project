@@ -59,38 +59,38 @@ li {
 }
 
 #personal {
-  border: 2px solid #DE4564;
+  border: 2px solid #28235D;
   margin-bottom: 1em;
   border-radius: 1em;
-  background-color: #FFDFF7;
+  background-color: #d9edf7;
 }
 
 #devices {
-  border: 2px solid #F27439;
+  border: 2px solid #28235D;
   margin-bottom: 1em;
   border-radius: 1em;
-  background-color: #FCFFCD;
+  background-color: #d9edf7;
 }
 
 #social {
-  border: 2px solid #1C7BB1;
+  border: 2px solid #28235D;
   margin-bottom: 1em;
   border-radius: 1em; 
-  background-color: #DFE7FF;
+  background-color: #d9edf7;
 }
 
 #interests {
-  border: 2px solid #43A17C;
+  border: 2px solid #28235D;
   margin-bottom: 1em;
   border-radius: 1em; 
-  background-color: #DFFFE7;
+  background-color: #d9edf7;
 }
 
 #scores {
-  border: 2px solid #7D41BA;
+  border: 2px solid #28235D;
   margin-bottom: 1em;
   border-radius: 1em; 
-  background-color: #FFDFF7;
+  background-color: #d9edf7;
 }
 
 #score-item {
