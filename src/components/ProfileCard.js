@@ -61,7 +61,7 @@ class ProfileCard extends Component {
                     followers={account.followers}
                   />;
                 }
-                if (account.type === 'facebook') {
+                else {
                   return <Facebook
                     key={i}
                     type={account.type}
