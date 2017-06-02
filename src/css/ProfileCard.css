@@ -5,6 +5,10 @@
   border-radius: 1em;
 }
 
+.card.card-block {
+  padding-bottom: 1px;
+}
+
 .card-header {
   margin-left: 2.2em;
 }
@@ -43,7 +47,6 @@ li {
 #list-name {
   font-size: 16px;
   cursor: pointer;
-  margin-left: 2em;
   color: grey;
 }
 
@@ -56,39 +59,41 @@ li {
 #avatar {
   width: 80px;
   border-radius: 1em;
+  margin: 1em;
 }
 
 #personal {
   border: 2px solid #28235D;
-  margin-bottom: 1em;
+  margin: 1em;
+  margin-top: 0;
   border-radius: 1em;
   background-color: #d9edf7;
 }
 
 #devices {
   border: 2px solid #28235D;
-  margin-bottom: 1em;
+  margin: 1em;
   border-radius: 1em;
   background-color: #d9edf7;
 }
 
 #social {
   border: 2px solid #28235D;
-  margin-bottom: 1em;
+  margin: 1em;
   border-radius: 1em; 
   background-color: #d9edf7;
 }
 
 #interests {
   border: 2px solid #28235D;
-  margin-bottom: 1em;
+  margin: 1em;
   border-radius: 1em; 
   background-color: #d9edf7;
 }
 
 #scores {
   border: 2px solid #28235D;
-  margin-bottom: 1em;
+  margin: 1em;
   border-radius: 1em; 
   background-color: #d9edf7;
 }

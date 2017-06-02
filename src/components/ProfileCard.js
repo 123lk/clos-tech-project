@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import Devices from './Devices';
 import Twitter from './Twitter';
 import Facebook from './Facebook';
@@ -18,19 +18,21 @@ class ProfileCard extends Component {
     let scores = data[this.props.id].scores;
     return (
       <div className='profile-card' id='profile'>
-        <img src={require('../images/' + this.props.avatar)} id="avatar" alt="" />
-        <a data-toggle="collapse" data-target={'#' + this.props.id} aria-expanded="false" aria-controls="details">
+        <span><img src={require('../images/' + this.props.avatar)} id="avatar" alt="" /></span>
+        <span>
+          <a data-toggle="collapse" data-target={'#' + this.props.id} aria-expanded="false" aria-controls="details">
           <span id='list-name'>{this.props.firstName} {this.props.lastName}</span></a>
+          <p></p>
+        </span>
         <div className="collapse" id={this.props.id}>
           <div className="card card-block">
             <div className="card-block" id="personal">
               <h4 className="card-header" id='person-title'>Personal</h4>
               <ul>
-                <li><strong>Age:  </strong>{this.props.age}</li>
-                <li><strong>Job:  </strong>{this.props.job}</li>
-                <li><strong>Company:  </strong>{this.props.company}</li>
-                <li><strong>City:  </strong>{this.props.city}</li>
-                <li><strong>country:  </strong>{this.props.country}</li>
+                <li><i className="fa fa-user" aria-hidden="true"></i>  {this.props.age}</li>
+                <li><i className="fa fa-briefcase" aria-hidden="true"></i>   {this.props.job}, {this.props.company}</li>
+                <li><i className="fa fa-building" aria-hidden="true"></i>   {this.props.city}</li>
+                <li><i className="fa fa-globe" aria-hidden="true"></i>   {this.props.country}</li>
               </ul>
             </div>
             <div className="card-block" id="devices">
@@ -86,19 +88,19 @@ class ProfileCard extends Component {
               <div className='scores'>
                 <h5 id='score-item'><strong>Footprint</strong></h5>
                 <div className="progress">
-                  <div className="progress-bar" style={{width: scores.footprint_size + '%'}} role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">{scores.footprint_size}%</div>
+                  <div className="progress-bar" style={{ width: scores.footprint_size + '%' }} role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">{scores.footprint_size}%</div>
                 </div>
                 <h5 id='score-item'><strong>ID</strong></h5>
                 <div className="progress">
-                  <div className="progress-bar" style={{width: scores.id + '%'}} role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">{scores.id}%</div>
+                  <div className="progress-bar" style={{ width: scores.id + '%' }} role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">{scores.id}%</div>
                 </div>
                 <h5 id='score-item'><strong>Commenter</strong></h5>
                 <div className="progress">
-                  <div className="progress-bar" style={{width: scores.commenter + '%'}} role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">{scores.commenter}%</div>
+                  <div className="progress-bar" style={{ width: scores.commenter + '%' }} role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">{scores.commenter}%</div>
                 </div>
                 <h5 id='score-item'><strong>Sharer</strong></h5>
                 <div className="progress">
-                  <div className="progress-bar" style={{width: scores.sharer + '%'}} role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">{scores.footprint_size}%</div>
+                  <div className="progress-bar" style={{ width: scores.sharer + '%' }} role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">{scores.footprint_size}%</div>
                 </div>
               </div>
             </div>
