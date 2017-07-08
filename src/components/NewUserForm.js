@@ -15,7 +15,7 @@ class NewUserForm extends Component {
 
   handleSubmit(event) {
     console.log('A name was submitted: ' + this.state.value);
-    event.preventDefault();
+    // event.preventDefault();
   }
 
   render() {

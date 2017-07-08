@@ -3,10 +3,10 @@ import Devices from './Devices';
 import Twitter from './Twitter';
 import Facebook from './Facebook';
 import Interests from './Interests';
-import people from '../people.json';
-import * as helpers from '../helpers/helpers.js';
+import people from '../../people.json';
+import * as helpers from '../../helpers/helpers.js';
 import { Link } from 'react-router-dom';
-import '../css/ProfileCard.css';
+import '../../css/ProfileCard.css';
 
 const findById = helpers.findById;
 const data = findById(people.people);
@@ -19,7 +19,7 @@ class ProfileCard extends Component {
     let scores = data[this.props.id].scores;
     return (
       <div className='profile-card' id='profile'>
-        <span><img src={require('../images/' + this.props.avatar)} id="avatar" alt="" /></span>
+        <span><img src={require('../../images/' + this.props.avatar)} id="avatar" alt="" /></span>
         <span>
           <a data-toggle="collapse" data-target={'#' + this.props.id} aria-expanded="false" aria-controls="details">
           <Link to={`${this.props.id}/${this.props.firstName}-${this.props.lastName}`} id='list-name'>{this.props.firstName} {this.props.lastName}</Link></a>

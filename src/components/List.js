@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import ProfileCard from './ProfileCard';
+import ProfileCard from './ProfilePage/ProfileCard';
 import data from '../people.json';
 
 const people = data.people;

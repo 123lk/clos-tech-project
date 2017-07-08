@@ -1,16 +1,33 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/App';
-import ProfilePage from './components/ProfilePage';
 import {
   BrowserRouter as Router,
   Route
 } from 'react-router-dom';
+import { createStore, combineReducers, applyMiddleware } from 'redux';
+import { Provider } from 'react-redux';
+import thunk from 'redux-thunk';
+import { createLogger } from 'redux-logger';
+import peopleReducer from './reducers/people.reducer';
+
+// components 
+import App from './components/App';
+import ProfilePage from './components/ProfilePage/ProfilePage';
+
+// constants for redux 
+const logger  = createLogger();
+const reducer = combineReducers({
+  peopleReducer
+});
+const store = createStore(reducer, applyMiddleware(thunk, logger));
+
 
 ReactDOM.render(
+  <Provider store={store}>  
   <Router>
     <div>
       <Route exact path="/" component={App} />
       <Route path="/:id/:name" component={ProfilePage} />
     </div>
-  </Router>, document.getElementById('root'));
+  </Router>
+  </Provider>, document.getElementById('root'));
