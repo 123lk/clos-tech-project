@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Header from './Header';
 import List from './List';
+import NewUserForm from './NewUserForm';
 import '../css/App.css';
 
 class App extends Component {
@@ -15,6 +16,7 @@ class App extends Component {
         <div className='row'>
           <div className='col-xs-12'>
             <List />
+            <NewUserForm />
           </div>
         </div>
       </div>
