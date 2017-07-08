@@ -5,6 +5,7 @@ import Facebook from './Facebook';
 import Interests from './Interests';
 import people from '../people.json';
 import * as helpers from '../helpers/helpers.js';
+import { Link } from 'react-router-dom';
 import '../css/ProfileCard.css';
 
 const findById = helpers.findById;
@@ -21,7 +22,7 @@ class ProfileCard extends Component {
         <span><img src={require('../images/' + this.props.avatar)} id="avatar" alt="" /></span>
         <span>
           <a data-toggle="collapse" data-target={'#' + this.props.id} aria-expanded="false" aria-controls="details">
-          <span id='list-name'>{this.props.firstName} {this.props.lastName}</span></a>
+          <Link to={`${this.props.id}/${this.props.firstName}-${this.props.lastName}`} id='list-name'>{this.props.firstName} {this.props.lastName}</Link></a>
           <p></p>
         </span>
         <div className="collapse" id={this.props.id}>

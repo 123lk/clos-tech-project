@@ -1,9 +1,8 @@
 import React, {Component} from 'react';
 import Header from './Header';
-import List from './List';
-import '../css/App.css';
+import UserDetails from './UserDetails';
 
-class App extends Component {
+class ProfilePage extends Component {
   render () {
     return (
       <div className='container'>
@@ -14,7 +13,10 @@ class App extends Component {
         </div>
         <div className='row'>
           <div className='col-xs-12'>
-            <List />
+            <UserDetails
+            id={this.props.match.params.id}
+            name={this.props.match.params.name}
+             />
           </div>
         </div>
       </div>
@@ -22,4 +24,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default ProfilePage;
