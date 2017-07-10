@@ -1,30 +1,19 @@
 import React, {Component} from 'react';
 import ProfileCard from './ProfilePage/ProfileCard';
-import data from '../people.json';
-
-const people = data.people;
+import {connect} from 'react-redux';
 
 class List extends Component {
   render () {
     return (
       <div className='list'>
-        {people.map((person, i) => {
+        {this.props.data.people.map((person, i) => {
           return (
             <ProfileCard
               key={i}
               id={person.id}
               firstName={person.personal.first_name}
               lastName={person.personal.last_name}
-              age={person.personal.age}
-              job={person.personal.job_title}
               avatar={person.personal.avatar}
-              company={person.personal.job_company}
-              city={person.personal.city}
-              country={person.personal.country}
-              devices={person.devices}
-              social={person.social}
-              interests={person.interests}
-              scores={person.scores}
             />
           );
         })}
@@ -33,6 +22,13 @@ class List extends Component {
   }
 }
 
-export default List;
+function mapStateToProps (state) {
+
+  return {
+    data: state.people
+  };
+}
+
+export default connect(mapStateToProps)(List);
 
 

@@ -8,7 +8,7 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import { createLogger } from 'redux-logger';
-import peopleReducer from './reducers/people.reducer';
+import people from './reducers/people.reducer';
 
 // components 
 import App from './components/App';
@@ -17,7 +17,7 @@ import ProfilePage from './components/ProfilePage/ProfilePage';
 // constants for redux 
 const logger  = createLogger();
 const reducer = combineReducers({
-  peopleReducer
+  people
 });
 const store = createStore(reducer, applyMiddleware(thunk, logger));
 
