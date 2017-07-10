@@ -4,6 +4,7 @@ import Devices from './Devices';
 import Social from './Social';
 import Interests from './Interests';
 import Scores from './Scores';
+import {connect} from 'react-redux';
 
 class UserDetails extends Component {
   render () {
@@ -25,4 +26,10 @@ class UserDetails extends Component {
   }
 }
 
-export default UserDetails;
+function mapStateToProps (state) {
+  return {
+    data: state.people.personData
+  };
+}
+
+export default connect(mapStateToProps)(UserDetails);

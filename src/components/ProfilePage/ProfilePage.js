@@ -12,7 +12,7 @@ class ProfilePage extends Component {
   }
   render () {
     if (!this.props.personData) {
-      return <h1>Loading...</h1>;
+      return <h1>Sorry we don't have any details for this person yet :(</h1>;
     }
     return (
       <div className='container'>
@@ -48,5 +48,10 @@ function mapDispatchToProps (dispatch) {
     }
   };
 }
+
+ProfilePage.propTypes = {
+  fetchPersonData: PropTypes.func.isRequired
+};
+
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProfilePage);

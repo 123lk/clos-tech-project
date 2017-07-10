@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "axios": "^0.16.2",
     "bootstrap": "^3.3.7",
-    "chai": "^4.0.1",
+    "chai": "^4.0.2",
+    "deep-freeze": "0.0.1",
     "prop-types": "^15.5.10",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",

@@ -11,7 +11,7 @@ import { createLogger } from 'redux-logger';
 import people from './reducers/people.reducer';
 
 // components 
-import App from './components/App';
+import App from './components/HomePage/App';
 import ProfilePage from './components/ProfilePage/ProfilePage';
 
 // constants for redux 

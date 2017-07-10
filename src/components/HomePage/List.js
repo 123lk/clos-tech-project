@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import ProfileCard from './ProfilePage/ProfileCard';
+import ProfileCard from './ProfileCard';
 import {connect} from 'react-redux';
 
 class List extends Component {
@@ -23,7 +23,6 @@ class List extends Component {
 }
 
 function mapStateToProps (state) {
-
   return {
     data: state.people
   };

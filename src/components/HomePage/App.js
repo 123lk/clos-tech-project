@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
-import Header from './Header';
+import Header from '../Header';
 import List from './List';
 import NewUserForm from './NewUserForm';
 import PropTypes from 'prop-types';
-import * as actions from '../actions/index.js';
+import * as actions from '../../actions/index.js';
 import {connect} from 'react-redux';
-import '../css/App.css';
+import '../../css/App.css';
 
 class App extends Component {
   componentDidMount () {

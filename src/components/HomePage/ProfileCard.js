@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import '../../css/ProfileCard.css';
 
-
 class ProfileCard extends Component {
   render () {
     return (
