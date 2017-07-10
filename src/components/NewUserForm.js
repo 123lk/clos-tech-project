@@ -1,33 +1,34 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
+import { addPerson } from '../actions/index';
+import { connect } from 'react-redux';
 
-class NewUserForm extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {value: ''};
+let NewUserForm = ({ dispatch }) => {
+  let input
 
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
-
-  handleChange(event) {
-    this.setState({value: event.target.value});
-  }
-
-  handleSubmit(event) {
-    console.log('A name was submitted: ' + this.state.value);
-    // event.preventDefault();
-  }
-
-  render() {
-    return (
-      <form onSubmit={this.handleSubmit}>
-        <label>
-          <input type="text" placeholder="add a new person" value={this.state.value} onChange={this.handleChange} />
-        </label>
-        <input type="submit" value="Submit" />
+  return (
+    <div>
+      <form
+        onSubmit={e => {
+          e.preventDefault()
+          if (!input.value.trim()) {
+            return
+          }
+          dispatch(addPerson(input.value))
+          input.value = ''
+        }}
+      >
+        <input
+          ref={node => {
+            input = node
+          }}
+        />
+        <button type="submit">
+          Add person
+        </button>
       </form>
-    );
-  }
+    </div>
+  )
 }
+NewUserForm = connect()(NewUserForm);
 
 export default NewUserForm;

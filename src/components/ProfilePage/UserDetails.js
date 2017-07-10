@@ -6,7 +6,7 @@ import Interests from './Interests';
 import Scores from './Scores';
 
 class UserDetails extends Component {
-  render() {
+  render () {
     return (
       <div className='UserDetails'>
         <h2>I am the user details for {this.props.name}</h2>
@@ -17,7 +17,6 @@ class UserDetails extends Component {
         <Devices
           devices={this.props.data.devices}
         />
-
         <Social />
         <Interests />
         <Scores />

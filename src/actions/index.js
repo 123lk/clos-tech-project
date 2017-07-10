@@ -27,3 +27,15 @@ export function fetchPersonData (id) {
     });
   };
 }
+
+
+let newId = data.people[data.people.length - 1].id + 1;
+
+export function addPerson (name) {
+  return function (dispatch) {
+    return dispatch({
+      type: types.ADD_PERSON,
+      person: [{id: newId, personal: {first_name: name, last_name: 'Test', avatar: 'avatars/avatar-default.png'}}]
+    });
+  };
+}
