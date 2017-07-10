@@ -5,7 +5,6 @@ import '../../css/ProfileCard.css';
 
 class ProfileCard extends Component {
   render () {
-
     return (
       <div className='profile-card' id='profile'>
         <span><img src={require('../../images/' + this.props.avatar)} id="avatar" alt="" /></span>
