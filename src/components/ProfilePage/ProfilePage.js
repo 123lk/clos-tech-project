@@ -12,7 +12,7 @@ class ProfilePage extends Component {
   }
   render () {
     if (!this.props.personData) {
-      return <h1>Sorry we don't have any details for this person yet :(</h1>;
+      return <h1>Sorry we don't have any details for this person yet...</h1>;
     }
     return (
       <div className='container'>
