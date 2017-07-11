@@ -7,8 +7,8 @@ class Personal extends Component {
     }
     return (
       <div className='Personal'>
-      <h2>User details for {this.props.personal.first_name} {this.props.personal.last_name}</h2>
-      <h4>Personal</h4>
+      <h1>User details for {this.props.personal.first_name} {this.props.personal.last_name}</h1>
+      <h2>Personal</h2>
       <h4>Age: {this.props.personal.age}</h4>
       <h4>City: {this.props.personal.city}</h4>
       </div>

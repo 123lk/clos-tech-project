@@ -1,15 +1,21 @@
+// react
 import React from 'react';
 import ReactDOM from 'react-dom';
+// react-router
 import {
   BrowserRouter as Router,
   Route
 } from 'react-router-dom';
-import { createStore, combineReducers, applyMiddleware } from 'redux';
+// redux
+import { compose, createStore, combineReducers, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import { createLogger } from 'redux-logger';
-import people from './reducers/people.reducer';
+// redux-persist
+import { autoRehydrate, persistStore } from 'redux-persist';
 
+// reducer
+import people from './reducers/people.reducer';
 // components 
 import App from './components/HomePage/App';
 import ProfilePage from './components/ProfilePage/ProfilePage';
@@ -19,8 +25,15 @@ const logger  = createLogger();
 const reducer = combineReducers({
   people
 });
-const store = createStore(reducer, applyMiddleware(thunk, logger));
+const store = createStore(
+  reducer, 
+  compose(
+  applyMiddleware(thunk, logger),
+  autoRehydrate()
+  )
+  );
 
+persistStore(store);  
 
 ReactDOM.render(
   <Provider store={store}>  

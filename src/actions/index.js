@@ -1,5 +1,8 @@
 import * as types from './types';
 import data from '../people.json';
+// if (process.env.NODE_ENV === 'development') {
+//   //create variable to store path to relevant file
+// }
 
 function arrangeById (arr) {
   return arr.reduce(function (acc, item) {

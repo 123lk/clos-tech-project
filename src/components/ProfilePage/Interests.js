@@ -8,7 +8,7 @@ class Interests extends Component {
     }
     return (
       <div className='interests'>
-      <h4>Interests</h4>
+      <h2>Interests</h2>
       <h4>Name: {this.props.interests[0].name}</h4>
       </div>
     );

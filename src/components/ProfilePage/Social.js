@@ -7,7 +7,7 @@ class Social extends Component {
     }
     return (
       <div className='Social'>
-        <h4>Social</h4>
+        <h2>Social</h2>
         <h4>Account type: {this.props.social[0].type}</h4>
       </div>
     );

@@ -7,7 +7,7 @@ class Devices extends Component {
     }
     return (
       <div className='devices'>
-      <h4>Devices</h4>
+      <h2>Devices</h2>
       <h4>Device name: {this.props.devices[0].name}</h4>
       </div>
     );

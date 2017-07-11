@@ -7,7 +7,7 @@ class Scores extends Component {
     }
     return (
       <div className='Scores'>
-        <h4>Scores</h4>
+        <h2>Scores</h2>
         <h4>Commenter: {this.props.scores.commenter}</h4>
       </div>
     );
