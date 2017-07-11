@@ -8,18 +8,26 @@ import {connect} from 'react-redux';
 
 class UserDetails extends Component {
   render () {
+    if (!this.props.data) {
+      return <h3>Loading...</h3>;
+    }
     return (
       <div className='UserDetails'>
-        <h2>User details for {this.props.name}</h2>
         <Personal
           personal={this.props.data.personal}
         />
         <Devices
           devices={this.props.data.devices}
         />
-        <Social />
-        <Interests />
-        <Scores />
+        <Social 
+          social={this.props.data.social}
+        />
+        <Interests 
+          interests={this.props.data.interests}
+        />
+        <Scores 
+        scores={this.props.data.scores}
+        />
       </div>
     );
   }
