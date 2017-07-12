@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import ProfileCard from './ProfileCard';
 import {connect} from 'react-redux';
+import PropTypes from 'prop-types';
 
 class List extends Component {
   render () {
@@ -27,6 +28,10 @@ function mapStateToProps (state) {
     data: state.people
   };
 }
+
+List.PropTypes = {
+  data: PropTypes.array.isRequired
+};
 
 export default connect(mapStateToProps)(List);
 

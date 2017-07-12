@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 
 class Personal extends Component {
   render () {
@@ -15,5 +16,9 @@ class Personal extends Component {
     );
   }
 }
+
+Personal.propTypes = {
+  personal: PropTypes.object
+};
 
 export default Personal;

@@ -4,6 +4,7 @@ import Devices from './Devices';
 import Social from './Social';
 import Interests from './Interests';
 import Scores from './Scores';
+import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 
 class UserDetails extends Component {
@@ -38,5 +39,9 @@ function mapStateToProps (state) {
     data: state.people.personData
   };
 }
+
+UserDetails.propTypes = {
+  data: PropTypes.object.isRequired
+};
 
 export default connect(mapStateToProps)(UserDetails);

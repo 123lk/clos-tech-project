@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import '../../css/ProfileCard.css';
 
 class ProfileCard extends Component {
@@ -14,5 +15,11 @@ class ProfileCard extends Component {
     );
   }
 }
+
+ProfileCard.propTypes = {
+  firstName: PropTypes.string.isRequired,
+  lastName: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired
+};
 
 export default ProfileCard;

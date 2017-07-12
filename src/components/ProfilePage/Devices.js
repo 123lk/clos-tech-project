@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class Devices extends Component {
   render () {
@@ -17,5 +18,9 @@ class Devices extends Component {
     );
   }
 }
+
+Devices.propTypes = {
+  devices: PropTypes.array
+};
 
 export default Devices;
