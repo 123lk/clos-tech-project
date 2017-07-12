@@ -28,6 +28,5 @@ let NewUserForm = ({ dispatch }) => {
     </div>
   );
 };
-NewUserForm = connect()(NewUserForm);
 
-export default NewUserForm;
+export default connect()(NewUserForm);
