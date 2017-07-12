@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
 class Devices extends Component {
   render () {
@@ -7,8 +7,12 @@ class Devices extends Component {
     }
     return (
       <div className='devices'>
-      <h2>Devices</h2>
-      <h4>Device name: {this.props.devices[0].name}</h4>
+        <h2>Devices</h2>
+        {this.props.devices.map((device, i) => {
+          return (
+            <h4 key={i}>Device name: {device.name}</h4>
+          );
+        })}
       </div>
     );
   }

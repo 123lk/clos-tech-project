@@ -1,14 +1,21 @@
 import React, { Component } from 'react';
 
 class Social extends Component {
-  render () {
+  render() {
     if (!this.props.social) {
       return <h3>Loading...</h3>;
     }
     return (
       <div className='Social'>
         <h2>Social</h2>
-        <h4>Account type: {this.props.social[0].type}</h4>
+        {this.props.social.map((account, i) => {
+          return (
+            <div key={i}>
+              <h4>Account type: {account.type}</h4>
+              <span>URL: </span><a href={account.url}>{account.url}</a>
+            </div>
+          );
+        })}
       </div>
     );
   }

@@ -9,6 +9,7 @@ class Scores extends Component {
       <div className='Scores'>
         <h2>Scores</h2>
         <h4>Commenter: {this.props.scores.commenter}</h4>
+        <h4>Footprint Size: {this.props.scores.footprint_size}</h4>
       </div>
     );
   }

@@ -7,10 +7,10 @@ import * as actions from '../../actions/index.js';
 import {connect} from 'react-redux';
 import '../../css/App.css';
 
-
 class App extends Component {
   componentDidMount () {
     this.props.fetchPeople();
+    console.log('hello');
   }
   render () {
     return (
