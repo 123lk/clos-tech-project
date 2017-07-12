@@ -13,32 +13,6 @@
   margin-left: 2.2em;
 }
 
-#person-title {
-  color: #DE4564; 
-  font-weight: bold;
-} 
-
-#devices-title {
-  color: #F27439; 
-  font-weight: bold;
-}
-
-#social-title {
-  color: #1C7BB1;
-  font-weight: bold;
-}
-
-#interests-title {
-  color: #43A17C;
-  font-weight: bold;
-}
-
-#scores-title {
-  color: #7D41BA;
-  font-weight: bold;;
-  font-weight: bold;
-}
-
 li {
   list-style-type: none;
   padding-right: 2em;
@@ -61,44 +35,3 @@ li {
   border-radius: 1em;
   margin: 1em;
 }
-
-#personal {
-  border: 2px solid #28235D;
-  margin: 1em;
-  margin-top: 0;
-  border-radius: 1em;
-  background-color: #d9edf7;
-}
-
-#devices {
-  border: 2px solid #28235D;
-  margin: 1em;
-  border-radius: 1em;
-  background-color: #d9edf7;
-}
-
-#social {
-  border: 2px solid #28235D;
-  margin: 1em;
-  border-radius: 1em; 
-  background-color: #d9edf7;
-}
-
-#interests {
-  border: 2px solid #28235D;
-  margin: 1em;
-  border-radius: 1em; 
-  background-color: #d9edf7;
-}
-
-#scores {
-  border: 2px solid #28235D;
-  margin: 1em;
-  border-radius: 1em; 
-  background-color: #d9edf7;
-}
-
-#score-item {
-  margin-left: 3em;
-}
-

@@ -10,7 +10,6 @@ import '../../css/App.css';
 class App extends Component {
   componentDidMount () {
     this.props.fetchPeople();
-    console.log('hello');
   }
   render () {
     return (

@@ -1,5 +1,4 @@
-import React, {Component} from 'react';
-import '../../css/Interests.css';
+import React, { Component } from 'react';
 
 class Interests extends Component {
   render () {
@@ -8,12 +7,12 @@ class Interests extends Component {
     }
     return (
       <div className='interests'>
-      <h2>Interests</h2>
-      {this.props.interests.map((interest, i) => {
-        return (
-      <h4 key={i}>Name: {interest.name}</h4>
-        );
-      })}
+        <h2>Interests</h2>
+        {this.props.interests.map((interest, i) => {
+          return (
+            <h4 key={i}>Name: {interest.name}</h4>
+          );
+        })}
       </div>
     );
   }

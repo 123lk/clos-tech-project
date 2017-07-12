@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 class Scores extends Component {
-  render() {
+  render () {
     if (!this.props.scores) {
       return <h3>Loading...</h3>;
     }
