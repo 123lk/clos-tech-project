@@ -15,6 +15,7 @@ class UserDetails extends Component {
     return (
       <div className='UserDetails'>
         <Personal
+          id={this.props.data.id}
           personal={this.props.data.personal}
         />
         <Devices
